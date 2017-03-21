@@ -12,10 +12,13 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.post('/api/users', function(req, res) {
     var username = req.body.username;
     var email  = req.body.email ;
-    var firstname = req.body.firstname;
-    var lastname = req.body.lastname;
+    var FirstName = req.body.firstname;
+    var LastName = req.body.lastname;
 
-    res.send(username + ' ' + email + ' ' + firstname+lastname);
+    cache.put('Username.memo', username);
+    console.log(cache.get('Username.memo'));
+
+    res.send(username + ' ' + email + ' ' + FirstName + ' ' + LastName);
 });
 
 
