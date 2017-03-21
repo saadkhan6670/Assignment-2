@@ -1,16 +1,15 @@
 'use strict';
 
+   exports.CreateUser = function (req, res) {
 
-   exports.CreateUser = function (req, res, next) {
-
-        res.send({ message: 'hooray! welcome to our rest video api!' });
-
-
-    };
-    exports.LoginUser = function (req, res, next) {
+        res.send( 'hooray! welcome to our rest video api!' );
 
 
     };
-   exports.UserProfile = function (req, res, next) {
+  /* exports.LoginUser = function (req, res ) {
 
-    };
+
+    }
+   exports.UserProfile = function (req, res) {
+
+    }*/
