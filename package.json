@@ -1,0 +1,26 @@
+{
+  "name": "assignment2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "memory-cache": "^0.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saadkhan6670/Assignment-2.git"
+  },
+  "author": "saad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saadkhan6670/Assignment-2/issues"
+  },
+  "homepage": "https://github.com/saadkhan6670/Assignment-2#readme"
+}
