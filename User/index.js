@@ -12,9 +12,9 @@ router.get("/failed",function(req,res){
     res.json("FAILED ");
 });
 router.post('/create-user',controller.CreateUser,controller.ShowEnteredUser);
-router.post('/login-user', controller.LoginUser,passport.authenticate('local', { successRedirect: '/',
+router.post('/login-user', passport.authenticate('local', { successRedirect: '/',
     failureRedirect: '/failed',
-    failureFlash: true }));
+    failureFlash: true }) , controller.LoginUser );
 
 //router.get('/logged-in',controller.LoggedIn);
 router.get('/user-profile', controller.UserProfile);
