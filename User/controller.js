@@ -39,38 +39,26 @@ var username ,password , email  ,FirstName,  LastName;
 
    exports.LoginUser = function (req, res ) {
 
-       app.use(session({secret: "some secret"}));
+       app.use(session({secret: "some secret", resave: true,
+           saveUninitialized: true}));
        app.use(cookieParser());
        app.use(passport.initialize());
        app.use(passport.session());
 
-
-
-       passport.use( new LocalStrategy({
-               LogUser: 'username',
-               LogPass: 'password',
-               passReqToCallback: true
+       passport.use( new LocalStrategy( {
+               usernameField: 'username',
+               passwordField: 'password'
            },
-           function(req, user, password, done) {
-               exports.CreateUser.cache({ 'LogUser':user,'LogPass': password }, function(err, user) {
-                   if (err) throw err;
-                   if (!user)
-                       return done(null, false, {message:'Unknown User'});
+           function(username, password, done)  {
+               exports.CreateUser.cache.put({ username:username }, function(err, user) {
+                   if (err) {throw err;}
+                   if (!user){
+                       return done(null, false, {message:'Unknown User'});}
 
+                   if (!user.validPassword(password)) {
+                       return done(null, false, { message: 'Incorrect password.' });
+                   }
                    return done(null, user);
                });
            }));
-
-           passport.serializeUser(function (user, done) {
-               done(null, user);
-
-           });
-
-           passport.deserializeUser(function (user, done) {
-               exports.CreateUser.cache(user._id, function (err, user) {
-                   done(err, user);
-
-               });
-
-           });
        };
