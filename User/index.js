@@ -13,7 +13,8 @@ router.get("/failed",function(req,res){
 });
 router.post('/create-user',controller.CreateUser,controller.ShowEnteredUser);
 router.post('/login-user', controller.LoginUser,passport.authenticate('local', { successRedirect: '/',
-    failureRedirect: '/failed'}));
+    failureRedirect: '/failed',
+    failureFlash: true }));
 
 //router.get('/logged-in',controller.LoggedIn);
 router.get('/user-profile', controller.UserProfile);
