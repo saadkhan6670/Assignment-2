@@ -52,7 +52,7 @@ var username ,password , email  ,FirstName,  LastName;
                passReqToCallback: true
            },
            function(req, user, password, done) {
-               exports.CreateUser.cache.get({ 'LogUser':user,'LogPass': password }, function(err, user) {
+               exports.CreateUser.cache({ 'LogUser':user,'LogPass': password }, function(err, user) {
                    if (err) throw err;
                    if (!user)
                        return done(null, false, {message:'Unknown User'});
@@ -67,7 +67,7 @@ var username ,password , email  ,FirstName,  LastName;
            });
 
            passport.deserializeUser(function (user, done) {
-               exports.CreateUser.cache.get(user._id, function (err, user) {
+               exports.CreateUser.cache(user._id, function (err, user) {
                    done(err, user);
 
                });
