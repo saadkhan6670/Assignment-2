@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ceb58015-fc02-4500-9c95-86967f422c8c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/User/controller.js" afterPath="$PROJECT_DIR$/User/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/User/index.js" afterPath="$PROJECT_DIR$/User/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -242,7 +240,7 @@
       <workItem from="1490331800077" duration="11157000" />
       <workItem from="1490350255164" duration="131000" />
       <workItem from="1490419449080" duration="2078000" />
-      <workItem from="1490590140515" duration="5997000" />
+      <workItem from="1490590140515" duration="6064000" />
     </task>
     <task id="LOCAL-00001" summary="new package.json file">
       <created>1490073897591</created>
@@ -314,11 +312,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490350119486</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="authentication added">
+      <created>1490597017383</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1490597017383</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41756000" />
+    <option name="totallyTimeSpent" value="41823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="952" y="0" width="976" height="1038" extended-state="0" />
