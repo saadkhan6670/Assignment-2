@@ -5,9 +5,8 @@ var controller = require('./controller');
 router.get("/",function(req,res){
     res.json("TO create account go to this link /user/create-user \n TO login the account go to this link /user/login-user  ");
 });
-
-router.post('/create-user',controller.CreateUser, function (req, res) {
-    console.log("User Created Success") });
+var count=0;
+router.post('/create-user',controller.CreateUser);
 
 router.post('/login-user',controller.LoginUser );
 
