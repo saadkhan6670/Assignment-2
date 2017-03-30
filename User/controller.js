@@ -78,4 +78,32 @@ var arr = cache.get('User');
  }
    };
 
+   exports.UserProfile = function (req, res ){
+
+      var EmailCheck = req.params.Email;
+       var emailValidation;
+
+       var  Validity = false;
+
+       arr.forEach( function (User)
+       {
+           emailValidation =  User.email;
+
+           if ( EmailCheck === emailValidation){
+                   console.log("Email Matched");
+               Validity =true;
+               cache.get('User');
+               res.end("Welcome USER");
+           }
+       });
+
+       if (Validity===false) {
+           console.log("Invalid credentials");
+           res.end();
+       }
+
+
+
+   };
+
 

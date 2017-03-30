@@ -10,7 +10,6 @@ router.post('/create-user',controller.CreateUser);
 
 router.post('/login-user',controller.LoginUser );
 
-//router.get('/logged-in',controller.LoggedIn);
-//router.get('/user-profile', controller.UserProfile);
+router.get('/user-profile/:Email', controller.UserProfile);
 
 module.exports = router;
